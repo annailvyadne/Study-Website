@@ -1,0 +1,13 @@
+<div class="faq-container">
+  <h2>Frequently Asked Questions (FAQ)</h2>
+
+  <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+    <div class="faq-question" (click)="toggleAnswer(i)">
+      <h3>{{ faq.question }}</h3>
+      <span [class]="expandedIndex === i ? 'arrow down' : 'arrow right'"></span>
+    </div>
+    <div class="faq-answer" *ngIf="expandedIndex === i">
+      <p>{{ faq.answer }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="logo">
+    <a routerLink="">
+      <img src="assets/logo.png" alt="BareBrew Logo">
+    </a>
+    <a class="brand-name" routerLink="">StudySurface</a>
+  </div>
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class="navigation" [ngClass]="{'menu-open': isMenuOpen}">
+    <a routerLink="about">About</a>
+    <a routerLink="task">Task</a>
+    <a routerLink="pomodoro">Pomodoro</a>
+    <a routerLink="badges">Badges</a>
+    <a routerLink="resources">Resources</a>
+    <a routerLink="faq">FAQs</a>
+    <a routerLink="contact">Contact Us</a>
+  </nav>
+</header>

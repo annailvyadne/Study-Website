@@ -1,0 +1,57 @@
+<!-- main-body.component.html -->
+<section class="hero-banner">
+  <div class="banner-image">
+    <img src="assets/hero-banner.png" alt="Banner Image">
+  </div>
+  <div class="banner-content">
+    <h1>Study Smart, Not Hard</h1>
+    <p>
+      Welcome to <strong>StudySurface</strong>, your space to study efficiently and be as productive as you can be.
+      Whether you're looking to organize your tasks, manage your time with our Pomodoro feature, or explore resources to
+      aid in your learning journey, we are here to support you every step of the way.
+    </p>
+    <a routerLink="about"><button class="learn-more-btn">Learn More</button></a>
+  </div>
+</section>
+
+<!-- main-body.component.html -->
+<section class="quote-section">
+  <blockquote>
+    "Keep studying, keep surfing, keep achieving"
+  </blockquote>
+</section>
+
+
+<!-- main-body.component.html -->
+<section class="cards-section">
+  <h2>What You Need</h2>
+  <div class="cards-container">
+    <!-- Card 1: Task -->
+    <div class="card">
+      <img src="assets/task.png" alt="Task Image">
+      <h3>Task</h3>
+      <p *ngIf="showTask">Manage your tasks effectively by creating a to-do list, setting priorities, and tracking your
+        progress.</p>
+      <button (click)="toggleTask()">{{ showTask ? 'Read Less' : 'Read More' }}</button>
+    </div>
+
+    <!-- Card 2: Pomodoro -->
+    <div class="card">
+      <img src="assets/pomodoro.png" alt="Pomodoro Image">
+      <h3>Pomodoro</h3>
+      <p *ngIf="showPomodoro">Boost your productivity with the Pomodoro technique – work in focused intervals and take
+        regular breaks.</p>
+      <button (click)="togglePomodoro()">{{ showPomodoro ? 'Read Less' : 'Read More' }}</button>
+    </div>
+
+    <!-- Card 3: Resources -->
+    <div class="card">
+      <img src="assets/resources.png" alt="Resources Image">
+      <h3>Resources</h3>
+      <p *ngIf="showResources">Explore a curated list of study tips, tools, and articles to help you learn more
+        efficiently.</p>
+      <button (click)="toggleResources()">{{ showResources ? 'Read Less' : 'Read More' }}</button>
+    </div>
+  </div>
+</section>
+

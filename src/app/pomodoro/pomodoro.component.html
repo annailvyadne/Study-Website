@@ -1,0 +1,19 @@
+<div class="pomodoro-container">
+  <h2>Pomodoro Timer</h2>
+  <div class="time-settings">
+    <label for="minutes">Minutes:</label>
+    <input id="minutes" type="number" [(ngModel)]="customMinutes" min="0" max="60" />
+    <label for="seconds">Seconds:</label>
+    <input id="seconds" type="number" [(ngModel)]="customSeconds" min="0" max="59" />
+    <button (click)="setTimer()">Set Timer</button>
+  </div>
+  <div class="timer">
+    <span>{{ minutes }}:{{ seconds | number: '2.0' }}</span>
+  </div>
+  <div class="controls">
+    <button (click)="startTimer()" [disabled]="isRunning">Start</button>
+    <button (click)="stopTimer()" [disabled]="!isRunning">Stop</button>
+    <button (click)="resetTimer()">Reset</button>
+  </div>
+  <p>{{ message }}</p>
+</div>

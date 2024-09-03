@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pomodoro-container {
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  animation: fadeIn 1s ease-out; /* Apply fade-in animation */
+}
+
+.pomodoro-container h2 {
+  font-size: 2rem;
+  color: #005f99;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.time-settings {
+  margin-bottom: 20px;
+}
+
+.time-settings label {
+  font-size: 1rem;
+  color: #333;
+  margin-right: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.time-settings input {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.time-settings button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #005f99;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.time-settings button:hover {
+  background-color: #003d66;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background-color: #005f99;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.controls button:hover:not(:disabled) {
+  background-color: #003d66;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pomodoro-container {
+    padding: 20px;
+    max-width: 100%;
+    margin-top: 50%;
+    margin-bottom: 40%;
+  }
+
+  .timer {
+    font-size: 2.5rem;
+  }
+
+  .time-settings label,
+  .time-settings input,
+  .controls button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .controls {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pomodoro-container {
+    padding: 15px;
+  }
+
+  .timer {
+    font-size: 2rem;
+  }
+
+  .time-settings input {
+    width: 50px;
+  }
+
+  .controls button {
+    padding: 20px 20px;
+    font-size: 0.7rem;
+  }
+
+  .controls {
+    gap: 5px;
+  }
+}

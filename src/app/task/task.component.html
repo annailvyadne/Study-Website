@@ -1,0 +1,29 @@
+<div class="task-container">
+  <h2>Manage Your Tasks Efficiently</h2>
+  <p>
+    Use the Task Manager to add new tasks, set their priority level, and choose a due date to stay organized and
+    productive. Easily delete tasks once they're completed or no longer needed.
+  </p>
+
+  <div class="task-input">
+    <input [(ngModel)]="taskName" type="text" placeholder="Enter Task Name" />
+    <select [(ngModel)]="taskPriority">
+      <option value="" disabled selected>Select Priority</option>
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option>
+    </select>
+    <input [(ngModel)]="taskDueDate" type="date" />
+    <button class="add-task-button" (click)="addTask()">Add Task</button>
+  </div>
+
+  <div class="task-list">
+    <h3>Your Tasks</h3>
+    <ul>
+      <li *ngFor="let task of tasks; let i = index">
+        <span>{{ task.name }} - {{ task.priority }} - {{ task.dueDate | date }}</span>
+        <button (click)="deleteTask(i)" class="delete-button">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>

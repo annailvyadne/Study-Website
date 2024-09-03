@@ -1,0 +1,12 @@
+<div class="badges-container">
+  <h2>Achievements and Badges</h2>
+  <p>Earn badges as you progress through your study journey. Here are the badges you can unlock:</p>
+
+  <div class="badges-list">
+    <div class="badge-card" *ngFor="let badge of badges">
+      <img [src]="badge.image" [alt]="badge.name" class="badge-image">
+      <h3>{{ badge.name }}</h3>
+      <p>{{ badge.description }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.badges-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  animation: fadeIn 1s ease-out; /* Apply fade-in animation */
+}
+
+.badges-container h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif; 
+  color: #005f99;
+}
+
+.badges-container p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #666;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.badges-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.badge-card {
+  width: 200px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.badge-card:hover {
+  transform: scale(1.05);
+}
+
+.badge-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .badges-container {
+      margin-top: 30%;
+      margin-bottom: 20%;
+    }
+}
